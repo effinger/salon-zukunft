@@ -7,11 +7,12 @@ html(lang="de")
     meta(name="description", content="Inspiration für eine lebensdienliche Wirtschaft - das ist der «Salon für Zukunftswirtschaft». In der bezaubernden Atmosphäre der Effinger Stadtwohnig, unter Begleitung eines exquisiten Apéros, treffen sich Unternehmer:innen, Kreative und Wissbegierige, um ihre Ansätze und Erfahrungen zu teilen.")
     title="Salon für Zukunftswirtschaft, Bern"
     link(rel="stylesheet", href="/style.css")
-    script(defer=true, src="/js/alpine.js")
+    script(defer=true, src="/scripts/scroll.js")
+    // script(defer=true, src="/js/alpine.js")
 
   body
     div(class="bg-hero bg-cover bg-no-repeat min-h-[60vh] md:min-h-[80vh]")
-      div(class="container mx-auto p-4 ")
+      div(class="mx-auto p-4 sm:px-8")
         header.flex.justify-between.items-center
           h1.sr-only Salon für Zukunftswirtschaft 2024
           a(href="/") 
@@ -22,11 +23,23 @@ html(lang="de")
               a.nav(href="#ort") Ort
               a.nav(href="#story") &Uuml;ber uns 
               a.nav(href="#partner") Partner
-            div(class="md:hidden")
-              button(class="hamburger")
+            div(class="md:hidden relative")
+              button(class="burger", onClick="toggleNav()")
                 div.bar
                 div.bar
                 div.bar
+            div(class="mobile-nav")
+              nav.flex.flex-col.gap-4.text-lg.p-8
+                button(class="absolute right-2 top-6 p-4 hover:rotate-90 transition-all duration-500", onClick="toggleNav()")
+                  div.bar.rotate-45
+                  div.bar.-rotate-45
+                a(href="#programm", class="hover:underline", onClick="closeNav()") Programm
+                a(href="#ort", class="hover:underline", onClick="closeNav()") Ort
+                a(href="#story", class="hover:underline", onClick="closeNav()") &Uuml;ber uns 
+                a(href="#partner", class="hover:underline", onClick="closeNav()") Partner
+              
+
+
         div(class="w-[95%] sm:w-[80%] md:w-[550px] lg:w-[600px] xl:w-[800px] mx-auto p-4 pt-14 xl:pt-[20vh]")
           img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-full")
           h2(class="font-light text-sm sm:text-2xl md:text-2xl pl-[23%] md:-mt-6")
@@ -34,8 +47,8 @@ html(lang="de")
             | Effinger Coworking Space, 2. OG
             
           div(class="flex flex-col items-start justify-start md:flex-row gap-3 mx-auto mt-4 pl-[23%] mb-16 -mr-16")
-            a(href="javascript:alert('In Kürze!')" class="btn-primary") Jetzt Tickets kaufen
-            a(href="javascript:alert('In Bälde!')" class="btn-secondary") Im Kalender speichern
+            a(href="mailto:hallo@salon-zukunft.ch?subject=Ich%20komme%20gerne%20an%20den%20Salon%202024" class="btn-primary") Jetzt Tickets kaufen
+            a(href="/scripts/salon-2024.ics" class="btn-secondary") Im Kalender speichern
 
     div(class="bg-pink pt-16 md:pt-24 pb-32 md:pb-64 p-8 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
@@ -44,10 +57,11 @@ html(lang="de")
 
     div(class="bg-purple pt-16 md:pt-24 -mb-32 p-8 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
-        div(class="flex justify-end -mt-36 md:-mt-64 mb-8")
-          img(src="/img/movie.png", alt="Flashback", class="w-full max-w-[500px]")
-        
-        h2(class="font-bold text-2xl md:text-4xl text-pink") Programm
+        div(class="flex justify-end -mt-36 md:-mt-64")
+          iframe(width="560" class="rounded-lg" height="315" src="https://www.youtube.com/embed/RZdRgY0qmUY?si=oWv4z0ZfDa8z3Kw0" title="Flashback" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+          
+        div#programm
+        h2(class="font-bold text-2xl md:text-4xl text-pink mt-16") Programm
         ul(class="mt-4 list-disc ml-8 sm:ml-32 leading-6 flex flex-col gap-4")
           li Apéro (ab 18 Uhr)
           li Begr&uuml;ssung durch Effinger &amp; ImpactHub Bern
@@ -64,8 +78,8 @@ html(lang="de")
                 p.text-blue.font-bold.text-xl «#{speaker.text}»
                 p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
         
-    div(class="bg-pink pt-32 md:pt-48 pb-32 sm:pb-48 p-8 text-lg leading-8")
-      div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
+    div(class="bg-pink pt-16 sm:pb-48 p-8 text-lg leading-8")
+      div#ort(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] pt-16 md:pt-24")
         h2(class="font-bold text-2xl md:text-4xl text-white") Effinger Stadtwohnig
         p Die Effinger Stadtwohnung im Herzen von Bern, präsentiert sich im eleganten Charme eines Altbaus, gelegen im 2. Stock. Mit zwei Terrassen bietet sie einen idealen Rahmen für den Salon.
         div(class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-y-12 text-base font-bold")
@@ -85,7 +99,7 @@ html(lang="de")
             img(src="/img/icons/alarm.svg", alt="Uhrzeit", class="icon hover:animate-ping")
             p 18:00 Uhr
 
-    div(class="bg-purple p-8 pt-32 pb-0 text-lg leading-8 -mb-12")
+    div(class="bg-purple p-8 pt-16 md:pt-32 pb-0 text-lg leading-8 -mb-12", id="story")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
         h2(class="font-bold text-2xl md:text-4xl text-white") &Uuml;ber uns
         p Der Salon wird präsentiert von Unternehmer:innen der Spaces Effinger Coworking Space und ImpactHub Bern. Erstmals 2023 durchgeführt, erfreut sich der Salon grossem Interesse.
@@ -96,7 +110,7 @@ html(lang="de")
               img(src=`img/peeps/${peep.name.toLowerCase()}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
               p(class="md:w-48 mt-2 md:h-32 min-h-24") #{peep.name}<br/>#{peep.role}<br/>#{peep.company}
 
-        div.flex.flex-col.items-center
+        div.flex.flex-col.items-center#partner
           h3(class="mt-8 mb-2 text-xl font-light") Die Gastgeber-Spaces
           div.flex.gap-6
             a(href="https://bern.impacthub.net/", target="_blank", rel="noopener noreferrer") 
@@ -110,7 +124,7 @@ html(lang="de")
           div
             p.font-bold.mb-12 Salon für Zukunftswirtschaft, 2024<br/>Effingerstrasse 10, 3011 Bern
             nav.flex.flex-col.gap-2 
-              a.footer-nav(href="mailto:hello@salon-zukunft.ch") hello@salon-zukunft.ch
+              a.footer-nav(href="mailto:hallo@salon-zukunft.ch") hallo@salon-zukunft.ch
               a.footer-nav(href="https://www.effinger.ch/blog/auftakt-des-ersten-salon-fur-zukunftswirtschaft/") R&uuml;ckblick Salon 2023
               a.footer-nav(href="https://www.effinger.ch/kontakt/" target="_blank") Impressum
           div

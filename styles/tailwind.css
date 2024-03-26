@@ -12,25 +12,31 @@
 
 @layer utilities {
   .btn {
-    @apply text-sm md:text-base px-4 py-2 rounded-lg text-white font-bold inline-block w-auto;
+    @apply text-sm md:text-base px-4 rounded-lg text-white font-bold inline-block w-auto;
   }
   .btn-primary {
-    @apply bg-pink btn;
+    @apply bg-pink btn py-2;
   }
   .btn-secondary {
-    @apply btn bg-transparent border py-1.5 px-3.5 border-white;
+    @apply btn bg-transparent border py-[7px] border-white;
   }
   .nav {
     @apply hover:scale-105 transition-all duration-150;
   }
   .bar {
-    @apply w-full h-2 bg-white my-4;
+    @apply w-8 h-1 bg-white rounded transition-all duration-150;
   }
   .footer-nav {
     @apply text-sm md:text-base text-white block hover:underline;
   }
+  .burger {
+    @apply flex flex-col gap-2 hover:gap-3 transition-all duration-150 -mt-4 -mr-2 p-4;
+  }
   .icon {
     @apply w-16 hover:rotate-12 scale-105 transition-all duration-150;
+  }
+  .mobile-nav {
+    @apply absolute top-0 bottom-0 right-0 left-1/4 bg-purple gap-4;
   }
 }
 
