@@ -1,39 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import "./fonts.css";
-
-@layer base {
-  :root {
-    @apply font-sans text-white bg-pink;
-  }
-}
-
-@layer utilities {
-  .btn {
-    @apply text-sm md:text-base px-4 py-2 rounded-lg text-white font-bold inline-block w-auto;
-  }
-  .btn-primary {
-    @apply bg-pink btn;
-  }
-  .btn-secondary {
-    @apply btn bg-transparent border py-1.5 px-3.5 border-white;
-  }
-  .nav {
-    @apply hover:scale-105 transition-all duration-150;
-  }
-  .bar {
-    @apply w-full h-2 bg-white my-4;
-  }
-  .footer-nav {
-    @apply text-sm md:text-base text-white block hover:underline;
-  }
-  .icon {
-    @apply w-16 hover:rotate-12 scale-105 transition-all duration-150;
-  }
-}
-
 @font-face {
   font-family: "Abil Display";
   src: url("/fonts/abril-display-regular.otf") format("opentype");

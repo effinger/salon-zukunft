@@ -1,4 +1,121 @@
-extends _includes/layout.pug
+doctype html
+html(lang="de")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords", content="Salon für Zukunftswirtschaft, Bern, Effinger, ImpactHub, Wirtschaft, Zukunft, Nachhaltigkeit, Community, Entrepreneurship, Unternehmerin, Kreativität, Erfahrung, Austausch, Inspiration, Apéro")
+    meta(name="description", content="Inspiration für eine lebensdienliche Wirtschaft - das ist der «Salon für Zukunftswirtschaft». In der bezaubernden Atmosphäre der Effinger Stadtwohnig, unter Begleitung eines exquisiten Apéros, treffen sich Unternehmer:innen, Kreative und Wissbegierige, um ihre Ansätze und Erfahrungen zu teilen.")
+    title="Salon für Zukunftswirtschaft, Bern"
+    link(rel="stylesheet", href="/style.css")
+    script(defer=true, src="/js/alpine.js")
 
-block content
-  h1.font-4xl.text-red-400 hello sallon
+  body
+    div(class="bg-hero bg-cover bg-no-repeat min-h-[60vh] md:min-h-[80vh]")
+      div(class="container mx-auto p-4 ")
+        header.flex.justify-between.items-center
+          h1.sr-only Salon für Zukunftswirtschaft 2024
+          a(href="/") 
+            img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-32")
+          div
+            div(class="md:flex gap-4 font-bold hidden")
+              a.nav(href="#programm") Programm
+              a.nav(href="#ort") Ort
+              a.nav(href="#story") &Uuml;ber uns 
+              a.nav(href="#partner") Partner
+            div(class="md:hidden")
+              button(class="hamburger")
+                div.bar
+                div.bar
+                div.bar
+        div(class="w-[95%] sm:w-[80%] md:w-[550px] lg:w-[600px] xl:w-[800px] mx-auto p-4 pt-14 xl:pt-[20vh]")
+          img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-full")
+          h2(class="font-light text-sm sm:text-2xl md:text-2xl pl-[23%] md:-mt-6")
+            | Montag, 10.06.2024 | 18 Uhr<br/>
+            | Effinger Coworking Space, 2. OG
+            
+          div(class="flex flex-col items-start justify-start md:flex-row gap-3 mx-auto mt-4 pl-[23%] mb-16 -mr-16")
+            a(href="javascript:alert('In Kürze!')" class="btn-primary") Jetzt Tickets kaufen
+            a(href="javascript:alert('In Bälde!')" class="btn-secondary") Im Kalender speichern
+
+    div(class="bg-pink pt-16 md:pt-24 pb-32 md:pb-64 p-8 text-lg leading-8")
+      div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
+        p Inspiration für eine lebensdienliche Wirtschaft &ndash; das ist der «Salon für Zukunftswirtschaft». In der bezaubernden Atmosphäre der Effinger Stadtwohnig, unter Begleitung eines exquisiten Apéros, treffen sich Unternehmer:innen, Kreative und Wissbegierige, um ihre Ansätze und Erfahrungen zu teilen. 
+        p.mt-8 Im Verlauf des Abends werden uns erlesene Unternehmen mit «Lightning Talks» in ihre Welt des neuen Wirtschaftens, der neuen Ernährung, der neuen Führung, Diversität, KI &amp; Ethik und vieles mehr einführen. Sie werden uns offenbaren, wie sie die Wirtschaft von morgen bereits heute mitgestalten.
+
+    div(class="bg-purple pt-16 md:pt-24 -mb-32 p-8 text-lg leading-8")
+      div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
+        div(class="flex justify-end -mt-36 md:-mt-64 mb-8")
+          img(src="/img/movie.png", alt="Flashback", class="w-full max-w-[500px]")
+        
+        h2(class="font-bold text-2xl md:text-4xl text-pink") Programm
+        ul(class="mt-4 list-disc ml-8 sm:ml-32 leading-6 flex flex-col gap-4")
+          li Apéro (ab 18 Uhr)
+          li Begr&uuml;ssung durch Effinger &amp; ImpactHub Bern
+          li Lightning Talks
+          li Interaktive Installation
+          li Austausch &amp; Ausklingen
+        
+        h2(class="mt-24 sm:mt-32 mb-8 font-bold text-2xl md:text-4xl text-pink") Lightning Talks
+        each speaker, ix in speakers.sort(() => Math.random() - 0.5)
+          div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
+            div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded")
+              img(src=`img/peeps/speaker.jpg#${speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4")
+              div.flex.flex-col.gap-2.p-4.justify-center
+                p.text-blue.font-bold.text-xl «#{speaker.text}»
+                p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
+        
+    div(class="bg-pink pt-32 md:pt-48 pb-32 sm:pb-48 p-8 text-lg leading-8")
+      div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
+        h2(class="font-bold text-2xl md:text-4xl text-white") Effinger Stadtwohnig
+        p Die Effinger Stadtwohnung im Herzen von Bern, präsentiert sich im eleganten Charme eines Altbaus, gelegen im 2. Stock. Mit zwei Terrassen bietet sie einen idealen Rahmen für den Salon.
+        div(class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-y-12 text-base font-bold")
+          div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
+            img(src="/img/icons/location_on.svg", alt="Effinger Adresse", class="icon")
+            p Effingerstrasse 10, 3011 Bern
+
+          div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
+            img(src="/img/icons/calendar_today.svg", alt="Datum", class="icon hover:rotate-180")
+            p Montag, 10.06.2024
+
+          div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
+            img(src="/img/icons/floor.svg", alt="Treppe", class="icon hover:animate-bounce")
+            p 2. Stock (Eingang Kaffeebar)
+
+          div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
+            img(src="/img/icons/alarm.svg", alt="Uhrzeit", class="icon hover:animate-ping")
+            p 18:00 Uhr
+
+    div(class="bg-purple p-8 pt-32 pb-0 text-lg leading-8 -mb-12")
+      div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
+        h2(class="font-bold text-2xl md:text-4xl text-white") &Uuml;ber uns
+        p Der Salon wird präsentiert von Unternehmer:innen der Spaces Effinger Coworking Space und ImpactHub Bern. Erstmals 2023 durchgeführt, erfreut sich der Salon grossem Interesse.
+    
+        div(class="grid gap-4 grid-cols-2 md:grid-cols-4 mt-16 leading-6 text-xs sm:text-sm sm:-mx-16")
+          each peep, ix in peeps.sort(() => Math.random() - 0.5)
+            div 
+              img(src=`img/peeps/${peep.name.toLowerCase()}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
+              p(class="md:w-48 mt-2 md:h-32 min-h-24") #{peep.name}<br/>#{peep.role}<br/>#{peep.company}
+
+        div.flex.flex-col.items-center
+          h3(class="mt-8 mb-2 text-xl font-light") Die Gastgeber-Spaces
+          div.flex.gap-6
+            a(href="https://bern.impacthub.net/", target="_blank", rel="noopener noreferrer") 
+              img(src="/img/logos/impact_hub_bern.png", alt="Impact Hub Bern", class="w-32 hover:scale-105 tarnsition-all duration-150")
+            a(href="https://effinger.ch/", target="_blank", rel="noopener noreferrer")
+              img(src="/img/logos/effinger_bern.svg", alt="Effinger Coworking, Bern", class="w-32 hover:scale-105 tarnsition-all duration-150")
+
+    footer(class="bg-pink p-8 pt-32 md:pb-32 text-base sm:text-lg sm:leading-8")
+      div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
+        div(class="flex flex-col-reverse gap-y-16 sm:flex-row justify-between items-start w-full")
+          div
+            p.font-bold.mb-12 Salon für Zukunftswirtschaft, 2024<br/>Effingerstrasse 10, 3011 Bern
+            nav.flex.flex-col.gap-2 
+              a.footer-nav(href="mailto:hello@salon-zukunft.ch") hello@salon-zukunft.ch
+              a.footer-nav(href="https://www.effinger.ch/blog/auftakt-des-ersten-salon-fur-zukunftswirtschaft/") R&uuml;ckblick Salon 2023
+              a.footer-nav(href="https://www.effinger.ch/kontakt/" target="_blank") Impressum
+          div
+            p.text-sm.uppercase Exklusive Unterst&uuml;tzung
+            a(href="https://www.berninvest.be.ch/en/start.html", target="_blank", rel="noopener noreferrer") 
+              img(src="/img/logos/standortfoerderung_bern.png", alt="Standortförderung Kanton Bern", class="h-24 hover:scale-105 tarnsition-all duration-150")
+
+
