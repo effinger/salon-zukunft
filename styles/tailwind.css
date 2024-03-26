@@ -33,7 +33,7 @@
     @apply flex flex-col gap-2 hover:gap-3 transition-all duration-150 -mt-4 -mr-2 p-4;
   }
   .icon {
-    @apply w-16 hover:rotate-12 scale-105 transition-all duration-150;
+    @apply w-12 sm:w-16 hover:rotate-12 scale-105 transition-all duration-150;
   }
   .mobile-nav {
     @apply md:hidden absolute top-0 bottom-0 right-0 left-1/4 bg-purple gap-4;

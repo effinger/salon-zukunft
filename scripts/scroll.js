@@ -10,11 +10,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 function toggleNav() {
-  const menu = document.querySelector(".mobile-nav");
+  document.querySelector(".mobile-nav").classList.toggle("hidden");
+  document.querySelector(".mobile-bg").classList.toggle("hidden");
   menu.classList.toggle("hidden");
 }
 
 function closeNav() {
-  const menu = document.querySelector(".mobile-nav");
-  menu.classList.add("hidden");
+  document.querySelector(".mobile-nav").classList.add("hidden");
+  document.querySelector(".mobile-bg").classList.add("hidden");
 }

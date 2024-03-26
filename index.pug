@@ -28,11 +28,15 @@ html(lang="de")
                 div.bar
                 div.bar
                 div.bar
+            div(class="mobile-bg hidden absolute top-0 left-0 right-0 bottom-0 bg-black/70")
+            
             div(class="mobile-nav hidden")
               nav.flex.flex-col.gap-4.text-lg.p-8
                 button(class="absolute right-2 top-6 p-4 hover:rotate-90 transition-all duration-500", onClick="toggleNav()")
                   div.bar.rotate-45
                   div.bar.-rotate-45
+                img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-32")
+                div.w-full.border-b.border-white
                 a(href="#programm", class="hover:underline", onClick="closeNav()") Programm
                 a(href="#ort", class="hover:underline", onClick="closeNav()") Ort
                 a(href="#story", class="hover:underline", onClick="closeNav()") &Uuml;ber uns 
