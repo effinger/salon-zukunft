@@ -50,7 +50,7 @@ html(lang="de")
             | Montag, 10.06.2024 | 18 Uhr<br/>
             | Effinger Coworking Space, 2. OG
             
-          div(class="flex flex-col items-start justify-start md:flex-row gap-3 mx-auto mt-4 pl-[23%] mb-16 -mr-16")
+          div(class="flex flex-col items-start justify-start md:flex-row gap-3 mx-auto mt-4 pl-[23%] mb-16 -mr-8")
             a(href="mailto:hallo@salon-zukunft.ch?subject=Ich%20komme%20gerne%20an%20den%20Salon%202024" class="btn-primary") Jetzt Tickets kaufen
             a(href="/scripts/salon-2024.ics" class="btn-secondary") Im Kalender speichern
 
@@ -62,7 +62,7 @@ html(lang="de")
     div(class="bg-purple pt-16 md:pt-24 -mb-32 p-8 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
         div(class="flex justify-end -mt-36 md:-mt-64")
-          iframe(width="560" class="rounded-lg" height="315" src="https://www.youtube.com/embed/RZdRgY0qmUY?si=oWv4z0ZfDa8z3Kw0" title="Flashback" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+          iframe(class="rounded-lg w-full md:w-[560px]" height="315" src="https://www.youtube.com/embed/RZdRgY0qmUY?si=oWv4z0ZfDa8z3Kw0" title="Flashback" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
           
         div#programm
         h2(class="font-bold text-2xl md:text-4xl text-pink mt-16") Programm
@@ -108,7 +108,7 @@ html(lang="de")
         h2(class="font-bold text-2xl md:text-4xl text-white") &Uuml;ber uns
         p Der Salon wird präsentiert von Unternehmer:innen der Spaces Effinger Coworking Space und ImpactHub Bern. Erstmals 2023 durchgeführt, erfreut sich der Salon grossem Interesse.
     
-        div(class="grid gap-4 grid-cols-2 md:grid-cols-4 mt-16 leading-6 text-xs sm:text-sm sm:-mx-16")
+        div(class="grid gap-4 grid-cols-2 md:grid-cols-4 mt-16 leading-6 text-xs sm:text-sm md:-mx-16")
           each peep, ix in peeps.sort(() => Math.random() - 0.5)
             div 
               img(src=`img/peeps/${peep.name.toLowerCase()}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
