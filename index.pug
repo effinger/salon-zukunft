@@ -115,7 +115,7 @@ html(lang="de")
         div(class="grid gap-4 grid-cols-2 md:grid-cols-4 mt-16 leading-6 text-xs sm:text-sm md:-mx-16")
           each peep, ix in peeps.sort(() => Math.random() - 0.5)
             div 
-              img(src=`img/peeps/${peep.name.toLowerCase()}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
+              img(src=`img/peeps/${peep.name.toLowerCase().replace("é", "e")}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
               p(class="md:w-48 mt-2 md:h-32 min-h-24") #{peep.name}<br/>#{peep.role}<br/>#{peep.company}
 
         div.flex.flex-col.items-center#partner
