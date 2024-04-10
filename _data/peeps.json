@@ -1,7 +1,7 @@
 [
   { "name": "Domenica", "role": "Gastronomin", "company": "Effinger" },
-  { "name": "Stefan", "role": "IT-Unternehmer", "company": "Effinger" },
   { "name": "Michelle", "role": "Managing Partner, Lead Community & Ecosystem", "company": "ImpactHub Bern" },
+  { "name": "Stefan", "role": "IT-Unternehmer", "company": "Effinger" },
   { "name": "Markus", "role": "Bildungsentwickler", "company": "Effinger" },
   { "name": "Célina", "role": "Unternehmerin", "company": "ImpactHub Bern" },
   { "name": "Manuel", "role": "Unternehmer", "company": "Effinger" },
