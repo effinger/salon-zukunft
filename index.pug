@@ -80,8 +80,8 @@ html(lang="de")
 
         each speaker, ix in speakers.filter(s=>!s.hidden).sort(() => Math.random() - 0.5)
           div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
-            div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded")
-              img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 rounded-l")
+            div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded overflow-hidden")
+              img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 hover:scale-110 transition-all duration-1000")
               div.flex.flex-col.gap-2.p-4.justify-center
                 p.text-blue.font-bold.text-xl «#{speaker.text}»
                 p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
