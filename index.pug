@@ -74,21 +74,17 @@ html(lang="de")
           li Apéro (ab 18 Uhr)
           li Begr&uuml;ssung durch Effinger &amp; ImpactHub Bern
           li Lightning Talks
-          li Interaktive Installation
           li Austausch &amp; Ausklingen
         
         h2(class="mt-24 sm:mt-32 mb-8 font-bold text-2xl md:text-4xl text-pink") Lightning Talks
 
-        p Die Speaker werden in Kürze bekannt gegeben. 
-        p.mb-64 Wir freuen uns auf inspirierende Beiträge und spannende Diskussionen.
-
-        //- each speaker, ix in speakers.sort(() => Math.random() - 0.5)
-        //-   div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
-        //-     div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded")
-        //-       img(src=`img/peeps/speaker.jpg#${speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4")
-        //-       div.flex.flex-col.gap-2.p-4.justify-center
-        //-         p.text-blue.font-bold.text-xl «#{speaker.text}»
-        //-         p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
+        each speaker, ix in speakers.filter(s=>!s.hidden).sort(() => Math.random() - 0.5)
+          div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
+            div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded")
+              img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 rounded-l")
+              div.flex.flex-col.gap-2.p-4.justify-center
+                p.text-blue.font-bold.text-xl «#{speaker.text}»
+                p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
         
     div(class="bg-pink pt-16 pb-24 sm:pb-48 p-8 text-lg leading-8")
       div#ort(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] pt-16 md:pt-24")

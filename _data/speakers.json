@@ -1,9 +1,16 @@
 [
-  { "name": "Dora", "company": "Diesel", "text": "Das ist der Titel und Thema des Talks in einem Satz." },
-  { "name": "Emily", "company": "Express", "text": "Das ist der Titel und Thema des Talks in einem Satz." },
-  { "name": "Franz", "company": "Flitz", "text": "Das ist der Titel und Thema des Talks in einem Satz." },
-  { "name": "Gerry", "company": "Goal", "text": "Das ist der Titel und Thema des Talks in einem Satz." },
-  { "name": "Holy", "company": "Heaven", "text": "Das ist der Titel und Thema des Talks in einem Satz." },
-  { "name": "Imanuel", "company": "Intel", "text": "Das ist der Titel und Thema des Talks in einem Satz." },
-  { "name": "Jay", "company": "Bird", "text": "Das ist der Titel und Thema des Talks in einem Satz." }
+  { "name": "Nora", "company": "Changetrackers", "text": "Wirkungsmanagement in Unternehmen und Teams" },
+  { "name": "Michael", "slug": "michaelw", "company": "Artifact", "text": "KI & Ethik" },
+  { "name": "Lukas", "company": "Ernährungsforum Bern", "text": "Ernährung, Direktvermarktung" },
+  { "name": "Clelia", "company": "Frau Mint", "text": "Begeisterung für Technik Frauen" },
+  { "hidden": true, "name": "Gäbu", "company": "LeguVegu", "text": "lokale Tofu-Produktion" },
+  { "name": "Lorenz", "company": "BFH", "text": "Sinnhaftigkeit in der Arbeit" },
+  { "name": "Michael", "company": "Michael Wyss", "text": "Unternehmenskultur" },
+  { "hidden": true, "name": "Raffael", "company": "Mondo Futura", "text": "Neues Wirtschaften" },
+  {
+    "name": "Anna + Célina",
+    "slug": "anna+celina",
+    "company": "Bärndütsch GmbH",
+    "text": "Innovation + Unternehmertum + Diversität + Inklusion?"
+  }
 ]
