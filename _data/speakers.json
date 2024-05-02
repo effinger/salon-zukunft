@@ -1,16 +1,17 @@
 [
   { "name": "Nora", "company": "Changetrackers", "text": "Wirkungsmanagement in Unternehmen und Teams" },
-  { "name": "Michael", "slug": "michaelw", "company": "Artifact", "text": "KI & Ethik" },
   { "name": "Lukas", "company": "Ernährungsforum Bern", "text": "Ernährung, Direktvermarktung" },
-  { "name": "Clelia", "company": "Frau Mint", "text": "Begeisterung für Technik Frauen" },
-  { "hidden": true, "name": "Gäbu", "company": "LeguVegu", "text": "lokale Tofu-Produktion" },
-  { "name": "Lorenz", "company": "BFH", "text": "Sinnhaftigkeit in der Arbeit" },
-  { "name": "Michael", "company": "Taktvoll führen", "text": "Unternehmenskultur und Musik" },
-  { "hidden": true, "name": "Raffael", "company": "Mondo Futura", "text": "Neues Wirtschaften" },
   {
     "name": "Anna + Célina",
     "slug": "anna+celina",
     "company": "Bärndütsch GmbH",
     "text": "Innovation und Diversität"
-  }
+  },
+
+  { "name": "Gäbu", "slug": "gabriel", "company": "LeguVegu", "text": "lokale Tofu-Produktion" },
+  { "name": "Michael", "slug": "michaelw", "company": "Artifact", "text": "KI & Ethik" },
+  { "name": "Lorenz", "company": "BFH", "text": "Sinnhaftigkeit in der Arbeit" },
+  { "name": "Clelia", "company": "Frau Mint", "text": "Begeisterung für Technik Frauen" },
+  { "name": "Michael", "company": "Taktvoll führen", "text": "Unternehmenskultur und Musik" },
+  { "name": "Raffael", "company": "Mondo Futura", "text": "Neues Wirtschaften" }
 ]
