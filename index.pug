@@ -47,48 +47,56 @@ html(lang="de")
         div(class="w-[95%] sm:w-[80%] md:w-[400px] lg:w-[500px] xl:w-[700px] mx-auto p-4 pt-14 xl:pt-[20vh]")
           img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-full")
           h2(class="font-light text-sm sm:text-2xl md:text-2xl text-center mt-4")
-            | Montag, 10.06.2024 | 18 Uhr<br/>
+            | Montag, 16.06.2025 | 18 Uhr<br/>
             | Effinger Coworking Space, 2. OG
             
-          div(class="flex flex-col items-center justify-center md:flex-row gap-3 mx-auto mt-12 mb-4")
-            a(href="https://eventfrog.ch/de/p/diverses/salon-fuer-zukunftswirtschaft-7182049387761077011.html" class="btn-primary" target="_blank") Jetzt Tickets kaufen
-            a(href="/scripts/salon-2024.ics" class="btn-secondary") Im Kalender speichern
+          div(class="flex flex-col items-center justify-center md:flex-row gap-3 mx-auto mt-12 mb-28")
+            a(href="https://docs.google.com/forms/d/e/1FAIpQLSdnJQU3Rcu5UMxjOv2M8E9ces4rhcEo6N030DANs3gBTLKWBg/viewform" class="btn-primary" target="_blank") Newsletter abonnieren
+            a(href="/scripts/salon-2025.ics" class="btn-secondary") Im Kalender speichern
           
-          div(class="flex flex-col items-center justify-center mx-auto mt-4 mb-16 -mr-8 font-extralight text-xs sm:text-base")
-            p.text-center Eintritt zum Selbstkostenpreis (CHF 30).
-            p.text-center Plätze sind beschränkt.
+          //- div(class="flex flex-col items-center justify-center mx-auto mt-4 mb-16 -mr-8 font-extralight text-xs sm:text-base")
+          //-   p.text-center Eintritt zum Selbstkostenpreis (CHF 30).
+          //-   p.text-center Plätze sind beschränkt.
 
-    div(class="bg-pink pt-16 md:pt-24 pb-32 md:pb-64 p-8 text-lg leading-8")
+    div(class="bg-pink px-8 pt-16 md:pt-24 pb-32 md:pb-48 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] text-xl")
         p Inspiration für eine lebensdienliche Wirtschaft &ndash; das ist der «Salon für Zukunftswirtschaft». In der bezaubernden Atmosphäre der Effinger Stadtwohnig, unter Begleitung eines exquisiten Apéros, treffen sich Unternehmer:innen, Kreative und Wissbegierige, um ihre Ansätze und Erfahrungen zu teilen. 
         p.mt-8 Im Verlauf des Abends werden uns erlesene Unternehmen mit «Lightning Talks» in ihre Welt des neuen Wirtschaftens, der neuen Ernährung, der neuen Führung, Diversität, KI &amp; Ethik und vieles mehr einführen. Sie werden uns offenbaren, wie sie die Wirtschaft von morgen bereits heute mitgestalten.
 
+        h2.text-3xl.mt-24.font-bold Highlights 2024
+
+
     div(class="bg-purple pt-16 md:pt-24 -mb-32 p-8 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
         div(class="flex justify-end -mt-36 md:-mt-64")
-          iframe(class="rounded-lg w-full md:w-[660px]" height="315" src="https://www.youtube.com/embed/RZdRgY0qmUY?si=oWv4z0ZfDa8z3Kw0" title="Flashback" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
-          
-        div#programm
-        h2(class="font-bold text-2xl md:text-4xl text-pink mt-16") Programm
-        ul(class="mt-4 list-disc pt-4 ml-8 sm:ml-16 leading-6 flex flex-col gap-4 text-xl")
-          li Apéro (ab 18 Uhr)
-          li Begr&uuml;ssung durch Effinger &amp; ImpactHub Bern
-          li Lightning Talks (Erster Block)
-          li Austausch &amp; Networking
-          li Lightning Talks (Zweiter Block)
-          li Ausklingen des Abends
-        
-        h2(class="mt-24 sm:mt-32 mb-8 font-bold text-2xl md:text-4xl text-pink") Lightning Talks
+          iframe(class="rounded-lg w-full md:w-[660px]" height="315" src="https://www.youtube.com/embed/l6b0Supo0gQ?si=rDiEOy2cFRmNT_Jb" title="Highlights 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+      
 
-        each speaker, ix in speakers.filter(s=>!s.hidden)
-          div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
-            div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded overflow-hidden")
-              img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 hover:scale-110 transition-all duration-1000")
-              div.flex.flex-col.gap-2.p-4.justify-center
-                p.text-blue.font-bold.text-xl «#{speaker.text}»
-                p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
+        h2.text-3xl.mt-24.font-bold Lightning Talks 2024
+        div(class="flex justify-end mt-8 mb-40")
+          iframe(class="rounded-lg w-full md:w-[660px]" height="315" src="https://www.youtube.com/embed/v8wySsWDZsw?si=Z2E0n0SWRxzX7nE5" title="Highlights 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+          
+        //- div#programm
+        //- h2(class="font-bold text-2xl md:text-4xl text-pink mt-16") Programm
+        //- ul(class="mt-4 list-disc pt-4 ml-8 sm:ml-16 leading-6 flex flex-col gap-4 text-xl")
+        //-   li Apéro (ab 18 Uhr)
+        //-   li Begr&uuml;ssung durch Effinger &amp; ImpactHub Bern
+        //-   li Lightning Talks (Erster Block)
+        //-   li Austausch &amp; Networking
+        //-   li Lightning Talks (Zweiter Block)
+        //-   li Ausklingen des Abends
         
-    div(class="bg-pink pt-16 pb-24 sm:pb-48 p-8 text-lg leading-8")
+        //- h2(class="mt-24 sm:mt-32 mb-8 font-bold text-2xl md:text-4xl text-pink") Lightning Talks
+
+        //- each speaker, ix in speakers.filter(s=>!s.hidden)
+        //-   div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
+        //-     div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded overflow-hidden")
+        //-       img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 hover:scale-110 transition-all duration-1000")
+        //-       div.flex.flex-col.gap-2.p-4.justify-center
+        //-         p.text-blue.font-bold.text-xl «#{speaker.text}»
+        //-         p.text-pink <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
+        
+    div(class="bg-pink pt-12 pb-24 sm:pb-48 p-8 text-lg leading-8")
       div#ort(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] pt-16 md:pt-24")
         h2(class="font-bold text-2xl md:text-4xl text-white") Effinger Stadtwohnig
         p Die Effinger Stadtwohnung im Herzen von Bern, präsentiert sich im eleganten Charme eines Altbaus, gelegen im 2. Stock. Mit zwei Terrassen bietet sie einen idealen Rahmen für den Salon.
