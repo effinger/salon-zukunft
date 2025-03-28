@@ -107,7 +107,7 @@ html(lang="de")
 
           div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
             img(src="/img/icons/calendar_today.svg", alt="Datum", class="icon hover:rotate-180")
-            p Montag, 10.06.2024
+            p Montag, 16.06.2024
 
           div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
             img(src="/img/icons/floor.svg", alt="Treppe", class="icon hover:animate-bounce")
@@ -125,7 +125,7 @@ html(lang="de")
         div(class="grid gap-4 grid-cols-2 md:grid-cols-4 mt-16 leading-6 text-xs sm:text-sm md:-mx-16")
           each peep, ix in peeps.sort(() => Math.random() - 0.5)
             div 
-              img(src=`img/peeps/${peep.name.toLowerCase().replace("é", "e")}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
+              img(src=`img/peeps/${peep.name.toLowerCase().replace("é", "e").replace(" ", "_")}.jpg`, alt="#{peep.name}", class="w-32 rounded-lg hover:scale-105 transition-all duration-150")
               p(class="md:w-48 mt-2 md:h-32 min-h-24") #{peep.name}<br/>#{peep.role}<br/>#{peep.company}
 
         div.flex.flex-col.items-center#partner
@@ -145,7 +145,7 @@ html(lang="de")
               a.footer-nav(href="mailto:hallo@salon-zukunft.ch") hallo@salon-zukunft.ch
               //- a.footer-nav(href="https://www.effinger.ch/blog/auftakt-des-ersten-salon-fur-zukunftswirtschaft/") R&uuml;ckblick Salon 2023
               a.footer-nav(href="https://www.effinger.ch/kontakt/" target="_blank") Impressum
-          div
+          //- div
             p.text-sm.uppercase Exklusive Unterst&uuml;tzung
             a(href="https://www.berninvest.be.ch/en/start.html", target="_blank", rel="noopener noreferrer") 
               img(src="/img/logos/standortfoerderung_bern.png", alt="Standortförderung Kanton Bern", class="h-24 hover:scale-105 tarnsition-all duration-150")
