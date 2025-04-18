@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    @apply font-sans text-white bg-pink;
+    @apply font-sans text-white bg-pink text-xs;
   }
 }
 
