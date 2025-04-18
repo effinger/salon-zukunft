@@ -12,10 +12,10 @@
 
 @layer utilities {
   .btn {
-    @apply text-sm md:text-base px-4 rounded-lg text-white font-bold inline-block w-auto;
+    @apply text-sm md:text-base p-4 rounded-lg text-white font-bold inline-block w-auto;
   }
   .btn-primary {
-    @apply bg-pink btn py-2;
+    @apply bg-pink btn;
   }
   .btn-secondary {
     @apply btn bg-transparent border py-[7px] border-white;

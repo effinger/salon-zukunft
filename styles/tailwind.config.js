@@ -21,7 +21,7 @@ module.exports = {
         white: "#FFFFFF",
       },
       backgroundImage: {
-        hero: "url('/img/hero.jpg')",
+        hero: "url('/img/salon_fuer_zukunftswirtschaft_short.jpg')",
       },
     },
   },
