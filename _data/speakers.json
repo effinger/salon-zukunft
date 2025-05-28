@@ -1,17 +1,10 @@
 [
-  { "name": "Nora", "company": "Changetrackers", "text": "Wirkungsmanagement in Unternehmen und Teams" },
-  { "name": "Lukas", "company": "Ernährungsforum Bern", "text": "Ernährung, Direktvermarktung" },
-  {
-    "name": "Anna + Célina",
-    "slug": "anna+celina",
-    "company": "Bärndütsch GmbH",
-    "text": "Innovation und Diversität"
-  },
-
-  { "name": "Gäbu", "slug": "gabriel", "company": "LeguVegu", "text": "lokale Tofu-Produktion" },
-  { "name": "Michael", "slug": "michaelw", "company": "Artifact", "text": "KI & Ethik" },
-  { "name": "Lorenz", "company": "BFH", "text": "Sinnhaftigkeit in der Arbeit" },
-  { "name": "Clelia", "company": "Frau Mint", "text": "Begeisterung für Technik Frauen" },
-  { "name": "Michael", "company": "Taktvoll führen", "text": "Unternehmenskultur und Musik" },
-  { "name": "Raffael", "company": "Monda Futura", "text": "Neues Wirtschaften" }
+  { "name": "Lucy", "company": "Ässbar", "text": "Frisch von Gestern" },
+  { "name": "Lukas", "company": "Purpose Schweiz", "text": "Nachhaltige und sinnorientierte Eigentumsstrukturen" },
+  { "name": "Gianni", "company": "brandSTIFT", "text": "Botschaften klar und wirkungsvoll kommunizieren" },
+  { "name": "Liliane & Pia", "slug": "liliane_pia", "company": "get things done", "text": "get things done" },
+  { "name": "Bettina", "company": "Firefly Management", "text": "Der Schlüssel zur erfolgreichen Krisenprävention" },
+  { "name": "Nalyn", "company": "Mindrs", "text": "Gesunde Ernährung – endlich anders" },
+  { "name": "Raphael", "company": "Restful GmbH", "text": "Peer-Coaching als tragende Säule unseres Gesundheitswesen" },
+  { "name": "Valérie", "slug": "valerie", "company": "Rflect", "text": "Innere Bildung für äusseren Wandel" }
 ]
