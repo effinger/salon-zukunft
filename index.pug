@@ -18,9 +18,9 @@ html(lang="de")
         Your browser does not support the video tag.
       div(class="relative mx-auto p-4 sm:px-8")
         header.flex.justify-between.items-center
-          h1.sr-only Salon für Zukunftswirtschaft 2025
+          h1.sr-only Salon für Zukunftswirtschaft 2026
           a(href="/") 
-            img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-32")
+            img(src="/img/logos/salon_logo_26.png", alt="Salon für Zukunftswirtschaft", class="w-32")
           div
             div(class="md:flex gap-4 font-bold hidden")
               a.nav(href="#programm") Programm
@@ -39,7 +39,7 @@ html(lang="de")
                 button(class="absolute right-2 top-6 p-4 hover:rotate-90 transition-all duration-500", onClick="toggleNav()")
                   div.bar.rotate-45
                   div.bar.-rotate-45
-                img(src="/img/logos/salon_logo.svg", alt="Salon für Zukunftswirtschaft", class="w-32")
+                img(src="/img/logos/salon_logo_26.png", alt="Salon für Zukunftswirtschaft", class="w-32")
                 div.w-full.border-b.border-white
                 a(href="#programm", class="hover:underline", onClick="closeNav()") Programm
                 a(href="#ort", class="hover:underline", onClick="closeNav()") Ort
@@ -49,15 +49,15 @@ html(lang="de")
 
 
         div(class="w-[95%] sm:w-[80%] md:w-[400px] lg:w-[500px] xl:w-[700px] mx-auto px-4 py-10 xl:pt-[20vh]")
-          img(src="/img/logos/salon_logo_25.svg", alt="Salon für Zukunftswirtschaft", class="w-full")
+          img(src="/img/logos/salon_logo_26.png", alt="Salon für Zukunftswirtschaft", class="w-full")
           h2(class="font-light text-2xl lg:ml-[142px] lg:-mt-8")
-            | Montag, 16.06.2025 | 18 Uhr<br/>
+            | Montag, 15.06.2026 | 18 Uhr<br/>
             | Effinger Coworking Space, 2. OG<br/><br/>
             
             div.flex.items-center.gap-4.pt-8
-              // a(href="https://docs.google.com/forms/d/e/1FAIpQLSdnJQU3Rcu5UMxjOv2M8E9ces4rhcEo6N030DANs3gBTLKWBg/viewform" class="btn-primary" target="_blank") Newsletter abonnieren
-              a(href="https://shorturl.at/6d9jW" class="btn-primary" target="_blank") Jetzt Ticket bestellen
-              a(href="/scripts/salon-2025.ics" class="btn-secondary") Im Kalender speichern
+              // a(href="https://shorturl.at/6d9jW" class="btn-primary" target="_blank") Jetzt Ticket bestellen
+              a(href="https://docs.google.com/forms/d/e/1FAIpQLSdnJQU3Rcu5UMxjOv2M8E9ces4rhcEo6N030DANs3gBTLKWBg/viewform" class="btn-primary" target="_blank") Newsletter abonnieren
+              a(href="/scripts/salon-2026.ics" class="btn-secondary") Im Kalender speichern
           
             div(class="flex flex-col justify-center mt-4 mb-16 font-extralight text-sm")
               p Eintritt zum Selbstkostenpreis (CHF 30).
@@ -67,10 +67,10 @@ html(lang="de")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] text-xl")
         p Inspiration für eine lebensdienliche Wirtschaft – das ist der «Salon für Zukunftswirtschaft». In der bezaubernden Atmosphäre der Effinger Stadtwohnig, unter Begleitung eines exquisiten Apéros, treffen sich Unternehmer:innen, Kreative und Wissbegierige, um ihre Ansätze und Erfahrungen zu teilen. Als besondere Highlights erwarten euch kurze, pointierte «Lightning Talks» von Pionier:innen einer neuen Wirtschaft.
 
-    div(class="bg-purple pt-16 md:pt-24 -mb-32 p-8 text-lg leading-8")
+    div(class="bg-purple pt-16 md:pt-24 p-8 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px]")
         div(class="flex justify-end -mt-36 md:-mt-64")
-          iframe(class="rounded-lg w-full md:w-[660px]" height="315" src="https://www.youtube.com/embed/l6b0Supo0gQ?si=rDiEOy2cFRmNT_Jb" title="Highlights 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+          iframe(class="rounded-lg w-full md:w-[660px]" height="315" src="https://www.youtube.com/embed/5xJkrN3LfnQ?si=rDiEOy2cFRmNT_Jb" title="Highlights 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
       
         div#programm
         h2(class="font-bold text-2xl md:text-4xl text-pink mt-16") Programm
@@ -84,15 +84,15 @@ html(lang="de")
         //- div(class="flex justify-end mt-8 mb-40")
         //-   p Im Verlauf des Abends werden uns erlesene Unternehmen mit «Lightning Talks» in ihre Welt des neuen Wirtschaftens, der neuen Ernährung, der neuen Führung und vieles mehr einführen.
           
-        h2(class="mt-24 sm:mt-32 mb-8 font-bold text-2xl md:text-4xl text-pink") Lightning Talks
+        //- h2(class="mt-24 sm:mt-32 mb-8 font-bold text-2xl md:text-4xl text-pink") Lightning Talks
 
-        each speaker, ix in speakers.filter(s=>!s.hidden)
-          div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
-            div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded overflow-hidden")
-              img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 hover:scale-110 transition-all duration-1000")
-              div.flex.flex-col.gap-2.p-4.pl-8.justify-center
-                p.text-blue.font-bold.text-3xl.mb-4 «#{speaker.text}»
-                p.text-pink.text-xl <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
+        //- each speaker, ix in speakers.filter(s=>!s.hidden)
+        //-   div(class=`flex justify-${ix % 2 ? 'end' : 'start'}`)
+        //-     div(class="bg-white sm:w-3/4 flex flex-col sm:flex-row mb-8 max-w-[80%] md:max-w-full rounded overflow-hidden")
+        //-       img(src=`img/speakers/${speaker.slug || speaker.name.toLowerCase()}.jpg`, alt="#{speaker.name}", class="w-full sm:w-1/4 hover:scale-110 transition-all duration-1000")
+        //-       div.flex.flex-col.gap-2.p-4.pl-8.justify-center
+        //-         p.text-blue.font-bold.text-3xl.mb-4 «#{speaker.text}»
+        //-         p.text-pink.text-xl <b>#{speaker.name}</b> von <b>#{speaker.company}</b>
         
     div(class="bg-pink pt-12 pb-24 sm:pb-48 p-8 text-lg leading-8")
       div#ort(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] pt-16 md:pt-24")
@@ -105,7 +105,7 @@ html(lang="de")
 
           div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
             img(src="/img/icons/calendar_today.svg", alt="Datum", class="icon hover:rotate-180")
-            p Montag, 16.06.2024
+            p Montag, 15.06.2026
 
           div(class="flex md:flex-col gap-x-2 items-center sm:items-start")
             img(src="/img/icons/floor.svg", alt="Treppe", class="icon hover:animate-bounce")
