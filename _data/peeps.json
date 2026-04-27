@@ -1,7 +1,8 @@
 [
-  { "name": "Michelle S", "role": "Managing Partner, Lead Community & Ecosystem", "company": "ImpactHub Bern" },
+  { "name": "Michelle S", "role": "Pychologin", "company": "Con Sentido GmbH" },
   { "name": "Stefan", "role": "IT-Unternehmer", "company": "Effinger" },
   { "name": "Markus", "role": "Bildungsentwickler", "company": "Effinger" },
-  { "name": "Michelle B", "role": "Marketing & Communication", "company": "ImpactHub Bern" },
-  { "name": "Manuel", "role": "Unternehmer", "company": "Effinger" }
+  { "name": "Lisa", "role": "Operations", "company": "ImpactHub Bern" },
+  { "name": "Manuel", "role": "Unternehmer", "company": "Effinger" },
+  { "name": "Melina", "role": "Community & Operations", "company": "Impact Hub Bern" }
 ]
