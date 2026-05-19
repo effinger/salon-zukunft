@@ -1,8 +1,9 @@
 [
-  { "name": "Michelle S", "role": "Pychologin", "company": "Con Sentido GmbH" },
+  { "name": "Michelle", "role": "Pychologin", "company": "Con Sentido GmbH" },
   { "name": "Stefan", "role": "IT-Unternehmer", "company": "Effinger" },
   { "name": "Markus", "role": "Bildungsentwickler", "company": "Effinger" },
   { "name": "Lisa", "role": "Operations", "company": "ImpactHub Bern" },
   { "name": "Manuel", "role": "Unternehmer", "company": "Effinger" },
-  { "name": "Melina", "role": "Community & Operations", "company": "Impact Hub Bern" }
+  { "name": "Melina", "role": "Community & Operations", "company": "Impact Hub Bern" },
+  { "name": "Elisa", "role": "UX & Business Analystin", "company": "Herr Bürli" }
 ]
