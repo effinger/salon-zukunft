@@ -1,10 +1,7 @@
 [
-  { "name": "Lucy", "company": "Ässbar", "text": "Frisch von Gestern" },
-  { "name": "Lukas", "company": "Purpose Schweiz", "text": "Nachhaltige und sinnorientierte Eigentumsstrukturen" },
-  { "name": "Gianni", "company": "brandSTIFT", "text": "Botschaften klar und wirkungsvoll kommunizieren" },
-  { "name": "Liliane & Pia", "slug": "liliane_pia", "company": "get things done", "text": "get things done" },
-  { "name": "Bettina", "company": "Firefly Management", "text": "Der Schlüssel zur erfolgreichen Krisenprävention" },
-  { "name": "Nalyn", "company": "Mindrs", "text": "Gesunde Ernährung – endlich anders" },
-  { "name": "Raphael", "company": "Restful GmbH", "text": "Peer-Coaching als tragende Säule unseres Gesundheitswesen" },
-  { "name": "Valérie", "slug": "valerie", "company": "Rflect", "text": "Innere Bildung für äusseren Wandel" }
+  { "name": "Samuel", "company": "Centre for Development and Environment, Uni Bern", "text": "Wandel durch soziale Innovationen" },
+  { "name": "Melchior", "company": "Glatthard & Stählin AG", "text": "Vom Wissenszeitalter zum Bedeutungszeitalter" },
+  { "name": "Jacqueline & Urs", "slug": "jacqueline", "company": "Effinity", "text": "Effinity - kreativ gemeinsam Wirtschaften" },
+  { "name": "Marc-André", "slug": "marc-andre", "company": "Greenstarter und Swiss Donut Economics", "text": "Donut-Ökonomie als Kompass" },
+  { "name": "Markus", "company": "Bildungsforum Schweiz", "text": "Bildung bewegt - Quellen des Lernens sichtbar machen" }
 ]
