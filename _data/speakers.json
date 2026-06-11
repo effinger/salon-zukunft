@@ -1,6 +1,8 @@
 [
   { "name": "Silvan", "company": "Ting Community", "text": "Reiche Eltern für alle – Community-Geld, wie geht das?" },
+  { "name": "Sarah", "company": "YLAH AG", "text": "Psychische Gesundheit - Das Zukunftsthema der Arbeitswelt" },
   { "name": "Samuel", "company": "Centre for Development and Environment, Uni Bern", "text": "Wandel durch soziale Innovationen" },
+  { "name": "Elena", "company": "Girls Getting Started", "text":"Die Hebelwirkung von Female Networking" },
   { "name": "Melchior", "company": "Glatthard & Stählin AG", "text": "Vom Wissenszeitalter zum Bedeutungszeitalter" },
   { "name": "Jacqueline & Urs", "slug": "jacqueline", "company": "Effinity", "text": "Effinity - kreativ gemeinsam Wirtschaften" },
   { "name": "Marc-André", "slug": "marc-andre", "company": "Greenstarter und Swiss Donut Economics", "text": "Donut-Ökonomie als Kompass" },
