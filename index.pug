@@ -9,6 +9,7 @@ html(lang="de")
     title Salon für Zukunftswirtschaft, Bern
     link(rel="stylesheet", href="/style.css")
     script(defer=true, src="/scripts/scroll.js")
+    script(defer=true, src="/scripts/lightbox.js")
     // script(defer=true, src="/js/alpine.js")
 
   body
@@ -24,8 +25,9 @@ html(lang="de")
           div
             div(class="md:flex gap-4 font-bold hidden")
               a.nav(href="#programm") Programm
-              a.nav(href="#ort") Ort
-              a.nav(href="#story") &Uuml;ber uns 
+              //- a.nav(href="#ort") Ort
+              a.nav(href="#story") &Uuml;ber uns
+              a.nav(href="#" onclick="openLightbox(0); return false;") Impressionen
               a.nav(href="#partner") Partner
             div(class="md:hidden relative")
               button(class="burger", onClick="toggleNav()")
@@ -42,26 +44,32 @@ html(lang="de")
                 img(src="/img/logos/salon_logo_26.png", alt="Salon für Zukunftswirtschaft", class="w-32")
                 div.w-full.border-b.border-white
                 a(href="#programm", class="hover:underline", onClick="closeNav()") Programm
-                a(href="#ort", class="hover:underline", onClick="closeNav()") Ort
-                a(href="#story", class="hover:underline", onClick="closeNav()") &Uuml;ber uns 
+                //- a(href="#ort", class="hover:underline", onClick="closeNav()") Ort
+                a(href="#story", class="hover:underline", onClick="closeNav()") &Uuml;ber uns
+                a(href="#", class="hover:underline", onClick="closeNav(); openLightbox(0); return false;") Impressionen
                 a(href="#partner", class="hover:underline", onClick="closeNav()") Partner
               
 
 
         div(class="w-[95%] sm:w-[80%] md:w-[400px] lg:w-[500px] xl:w-[700px] mx-auto px-4 py-10 xl:pt-[20vh]")
           img(src="/img/logos/salon_logo_26.png", alt="Salon für Zukunftswirtschaft", class="w-full")
-          h2(class="font-light text-2xl lg:ml-[142px] lg:-mt-8")
-            | Montag, 15.06.2026 | 18 Uhr<br/>
-            | Effinger Terrasse<br/><br/>
+
+          p(class="font-light text-2xl lg:ml-[104px] lg:-mt-8") Danke an alle, die den Salon für Zukunftswirtschaft 2026 möglich gemacht haben.
+          div.flex.items-center.justify-center.gap-4.pt-8
+            button(class="btn-primary", onclick="openLightbox(0)") Impressionen ansehen
+
+          //- h2(class="font-light text-2xl lg:ml-[142px] lg:-mt-8")
+          //-   | Montag, 15.06.2026 | 18 Uhr<br/>
+          //-   | Effinger Terrasse<br/><br/>
             
-            div.flex.items-center.gap-4.pt-8
-              a(href="https://eventfrog.ch/de/p/kurse-seminare/soziale-weiterbildung/salon-fuer-zukunftswirtschaft-2026-7452695633431914789.html" class="btn-primary" target="_blank") Jetzt Ticket bestellen
-              // a(href="https://docs.google.com/forms/d/e/1FAIpQLSdnJQU3Rcu5UMxjOv2M8E9ces4rhcEo6N030DANs3gBTLKWBg/viewform" class="btn-primary" target="_blank") Newsletter abonnieren
-              a(href="/scripts/salon-2026.ics" class="btn-secondary") Im Kalender speichern
+          //-   div.flex.items-center.gap-4.pt-8
+          //-     a(href="https://eventfrog.ch/de/p/kurse-seminare/soziale-weiterbildung/salon-fuer-zukunftswirtschaft-2026-7452695633431914789.html" class="btn-primary" target="_blank") Jetzt Ticket bestellen
+          //-     // a(href="https://docs.google.com/forms/d/e/1FAIpQLSdnJQU3Rcu5UMxjOv2M8E9ces4rhcEo6N030DANs3gBTLKWBg/viewform" class="btn-primary" target="_blank") Newsletter abonnieren
+          //-     a(href="/scripts/salon-2026.ics" class="btn-secondary") Im Kalender speichern
           
-            div(class="flex flex-col justify-center mt-4 mb-16 font-extralight text-sm")
-              p Eintritt zum Selbstkostenpreis (CHF 30).
-              p Plätze sind beschränkt.
+          //-   div(class="flex flex-col justify-center mt-4 mb-16 font-extralight text-sm")
+          //-     p Eintritt zum Selbstkostenpreis (CHF 30).
+          //-     p Plätze sind beschränkt.
 
     div#programm(class="bg-pink px-8 pt-16 md:pt-24 pb-32 md:pb-48 text-lg leading-8")
       div(class="mx-auto sm:max-w-screen-sm xl:max-w-[800px] text-xl")
@@ -141,13 +149,21 @@ html(lang="de")
             p.font-bold.mb-12 Salon für Zukunftswirtschaft, 2026<br/>Effingerstrasse 10, 3011 Bern
             nav.flex.flex-col.gap-2 
               a.footer-nav(href="mailto:hallo@salon-zukunft.ch") hallo@salon-zukunft.ch
+              a.footer-nav(href="https://youtu.be/8MhV_On1aew") R&uuml;ckblick Salon 2026
               a.footer-nav(href="https://youtu.be/ev8yuQdcoFs") R&uuml;ckblick Salon 2025
               a.footer-nav(href="https://youtu.be/l6b0Supo0gQ") R&uuml;ckblick Salon 2024
               a.footer-nav(href="https://youtu.be/RZdRgY0qmUY") R&uuml;ckblick Salon 2023
               a.footer-nav(href="https://www.effinger.ch/kontakt/" target="_blank") Impressum
           - div
             p.text-sm.uppercase Exklusive Unterst&uuml;tzung
-            a(href="https://www.berninvest.be.ch/en/start.html", target="_blank", rel="noopener noreferrer") 
+            a(href="https://www.berninvest.be.ch/en/start.html", target="_blank", rel="noopener noreferrer")
               img(src="/img/logos/standortfoerderung_bern.png", alt="Standortförderung Kanton Bern", class="h-24 hover:scale-105 tarnsition-all duration-150")
+
+    div#lightbox(class="hidden fixed inset-0 z-50 bg-black/90 flex items-center justify-center")
+      button(class="absolute top-4 right-4 text-white/70 hover:text-white text-4xl leading-none p-2 z-10", onclick="closeLightbox()") &times;
+      button#lightbox-prev(class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-5xl leading-none p-4 z-10", onclick="prevImage()") &#8249;
+      button#lightbox-next(class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white/50 hover:text-white text-5xl leading-none p-4 z-10", onclick="nextImage()") &#8250;
+      img#lightbox-img(src="" alt="Impressionen Salon für Zukunftswirtschaft 2026" class="max-h-[90vh] max-w-[90vw] md:max-w-[85vw] object-contain select-none")
+      span#lightbox-counter(class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm")
 
 
